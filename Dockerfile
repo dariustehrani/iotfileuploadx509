@@ -11,7 +11,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y -qq \
     && apt-get upgrade -y -qq \
     && apt-get install -y -qq --no-install-recommends \
-    wget gnupg curl bzip2 ca-certificates apt-transport-https unzip 
+    wget gnupg curl bzip2 ca-certificates apt-transport-https unzip perl openssl
 
 # setup python3
 RUN apt-get update && apt-get install -y -qq --no-install-recommends \

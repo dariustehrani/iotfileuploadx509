@@ -1,0 +1,12 @@
+#
+
+# secrets
+env.list
+.credentials
+.pem
+.ppk
+.out
+.id
+id_rsa
+
+.DS_Store

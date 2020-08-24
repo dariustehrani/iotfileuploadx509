@@ -4,8 +4,15 @@ from azure.iot.device.aio import IoTHubDeviceClient
 from azure.core.exceptions import AzureError
 from azure.storage.blob import BlobClient
 
-CONNECTION_STRING = "[Device Connection String]"
-PATH_TO_FILE = r"[Full path to local file]"
+CONNECTION_STRING = "os.environ["CONNECTION_STRING"]"
+# PATH_TO_FILE = r"[Full path to local file]"
+
+try:  
+   os.environ["CONNECTION_STRING"]
+except KeyError: 
+   print "Please set the connection string via docker environment"
+   sys.exit(1)
+
 
 async def store_blob(blob_info, file_name):
     try:
