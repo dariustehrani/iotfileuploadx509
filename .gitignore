@@ -8,5 +8,7 @@ env.list
 .out
 .id
 id_rsa
+certs/
+certs/*
 
 .DS_Store
